@@ -537,20 +537,63 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
     .nav-links {
-        display: none;
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        padding: 30px 0;
+        gap: 0;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--border);
     }
 
     .menu-toggle {
         display: block;
+        cursor: pointer;
+        font-size: 1.5rem;
+        color: var(--text-primary);
+    }
+
+    .hero {
+        padding: 120px 0 60px;
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        line-height: 1.2;
     }
 
     .hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
     }
 
     .stats-grid {
@@ -564,10 +607,23 @@ footer {
 
     .skills-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
     }
 }
 
@@ -578,19 +634,25 @@ footer {
     }
 
     .hero {
-        padding: 100px 0 60px;
+        padding: 100px 0 50px;
     }
 
     .hero h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .hero p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 6px 14px;
     }
 
     .stats-grid {
         grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .skills-grid {
@@ -602,6 +664,10 @@ footer {
     }
 
     .section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .section-subtitle {
+        font-size: 0.9rem;
     }
 }
