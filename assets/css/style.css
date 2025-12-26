@@ -250,24 +250,60 @@ ul {
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
 }
 
+/* Stats Section */
+.stats-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    width: 100%;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
 .stat-divider {
     width: 1px;
     height: 40px;
     background: rgba(255, 255, 255, 0.1);
 }
 
-.stat-box h3 {
+.stat-card h3 {
     font-size: 2rem;
     font-weight: 800;
     color: #fff;
     margin-bottom: 5px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-.stat-box p {
+.stat-card p {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
     text-transform: uppercase;
     letter-spacing: 1px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.4;
 }
 
 /* About Section */
